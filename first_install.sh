@@ -9,7 +9,7 @@ sed -i "s@atv@atv${macAdr: -6}@g" /data/local/tmp/atlas_config.json
 am startservice com.pokemod.atlas/com.pokemod.atlas.services.MappingService # Better sooner than later
 
 /system/bin/curl -s -k -L -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3" -o /sdcard/magisk_update.sh https://raw.githubusercontent.com/cldevrun/AtlasScripts/main/magisk_update.sh
-/system/bin/curl -s -k -L -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3" -o /sdcard/delete_old_magisk_and_install_new_apk.sh https://raw.githubusercontent.com/Astu04/AtlasScripts/main/delete_old_magisk_and_install_new_apk.sh
+/system/bin/curl -s -k -L -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3" -o /sdcard/delete_old_magisk_and_install_new_apk.sh https://raw.githubusercontent.com/cldevrun/AtlasScripts/main/delete_old_magisk_and_install_new_apk.sh
 su -c "mount -o remount,rw /system"
 su -c 'chmod +x /sdcard/delete_old_magisk_and_install_new_apk.sh'
 su -c 'mv "/sdcard/delete_old_magisk_and_install_new_apk.sh" "/etc/init.d/43delete_old_magisk_and_install_new_apk"'
