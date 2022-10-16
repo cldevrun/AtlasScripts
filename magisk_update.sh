@@ -105,8 +105,8 @@ fi
 ################ start of execution
 wait_for_network
 mount -o remount,rw /system
-sed -i "s@magisk_ver=.*@magisk_ver=\"$magisk_ver\"@g" /etc/init.d/42mad
-sed -i "s@url_magisk=.*@url_magisk=\"$url_magisk\"@g" /etc/init.d/42mad
+sed -i "s@magisk_ver=.*@magisk_ver=\"$magisk_ver\"@g" /etc/init.d/16mad
+sed -i "s@url_magisk=.*@url_magisk=\"$url_magisk\"@g" /etc/init.d/16mad
 check_magisk
 magisk_package=$(pm list packages | grep -vE "android|poke|atlas|droidlogic|factorytest" | grep -x '.\{28\}' | sed -e "s@package:@@g")
 pm uninstall $magisk_package
